@@ -92,10 +92,10 @@ def main():
     while start_input == "":
         print("No input recieved. Please retype and try again.")
         start_input = input(">> ")
-    if start_input == "s":
+    if start_input.lower() == "s" or start_input.lower() == "start":
         currentGameMode = pickGameMode()
         startGame(currentGameMode)
-    elif start_input == "q":
+    elif start_input.lower() == "q" or start_input.lower() == "quit":
         quitGame(0)
     else:
         print("Unknown error has occurred, quitting game.")
